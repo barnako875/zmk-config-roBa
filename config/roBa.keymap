@@ -14,52 +14,6 @@
     automouse-layer = <4>;
     scroll-layers = <5>;
 
-    behavior = <&trackball_sensitivity>;  // トラックボール感度変更のbehaviorを指定
-};
-
-&trackball_input_listener {
-    compatible = "zmk,listener";
-    event = <TRACKBALL_EVENT>;
-    handler = <&trackball_handler>;
-};
-
-&behaviors {
-    trackball_sensitivity: behavior_pointer_speed {
-        compatible = "zmk,behavior-pointer-speed";
-        listener = <&trackball_input_listener>;
-        multiplier = <1>;   // 初期倍率（1はデフォルト）
-        divisor = <1>;      // 初期除算（1はデフォルト）
-
-        // トラックボールの移動量に基づいて感度調整
-        adjustments {
-            size_1 {
-                min = <0>;
-                max = <10>;
-                multiplier = <0.5>;  // 小さな動きには感度を半分に
-            };
-
-            size_2 {
-                min = <11>;
-                max = <25>;
-                multiplier = <1.0>;  // 中程度の動きではデフォルト感度
-            };
-
-            size_3 {
-                min = <26>;
-                max = <50>;
-                multiplier = <1.5>;  // 大きな動きでは感度を1.5倍
-            };
-
-            size_4 {
-                min = <51>;
-                max = <80>;
-                multiplier = <2.0>;  // さらに大きな動きで感度を増加
-            };
-        };
-    };
-};
-
-
     // arrows {
     //     layers = <3>;
     //     bindings =
