@@ -159,7 +159,7 @@
         ARROW+SCRO {
             bindings = <
 &kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                                &kp C_BRI_DN  &kp C_PREV  &kp C_PP  &kp C_NEXT  &kp C_BRI_UP
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END    &trans             &trans  &mkp MB4      &mkp MB1    &mkp MB3  &mkp MB2    &mkp MB5
+&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END    &trans             &trans  &mkp MB4      &trans      &trans    &kp L       &mkp MB5
 &kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &kp PG_UP  &kp PAGE_DOWN      &trans  &trans        &trans      &trans    &trans      &trans
 &trans          &trans                  &trans          &trans                   &trans     &trans             &trans  &trans                                          &trans
             >;
