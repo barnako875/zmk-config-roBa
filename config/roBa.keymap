@@ -136,12 +136,12 @@
             >;
         };
 
-        SCROLL {
+        Game {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                         &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans      &trans  &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans      &tog 3  &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &kp SPACE  &trans      &trans  &kp ENTER                          &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
