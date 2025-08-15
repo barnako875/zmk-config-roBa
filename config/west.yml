@@ -15,7 +15,6 @@ manifest:
   self:
     path: config
 
-//以下 Prospector Scanner のモジュール
 manifest:
   remotes:
     - name: zmkfirmware
