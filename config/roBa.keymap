@@ -100,6 +100,27 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        // カスタムLayer-Tapの定義
+        my_lt: my_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            
+            // 長押しと判定するまでの時間（反応が悪い場合は数値を増やす）
+            tapping-term-ms = <200>; 
+            
+            // 単押し（Tap）を優先する
+            flavor = "tap-preferred"; 
+            
+            // 【重要】他のキーを打った直後の125ms間は、強制的に単押しとして判定する
+            require-prior-idle-ms = <125>; 
+            
+            // キーを素早く連続して叩いた際、レイヤー移動させずにキーの連続入力にする時間
+            quick-tap-ms = <200>; 
+            
+            // Layer-Tap用のバインディング（Holdでレイヤー移動 &mo、Tapでキー入力 &kp）
+            bindings = <&mo>, <&kp>; 
+        };
     };
 
     keymap {
@@ -107,10 +128,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                        &kp T                                               &kp Y        &kp U  &lt 3 I    &kp O    &kp P
+&kp Q             &kp W         &kp E         &kp R                        &kp T                                               &kp Y        &kp U  &my_lt 3 I    &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F                        &kp G        &mkp MB3                &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON               &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 5 L      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &my_lt 6 INT_HENKAN  &may_lt 2 SPACE  &my_lt 5 L      &kp BACKSPACE  &my_lt 1 ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&scroll_up_down>;
