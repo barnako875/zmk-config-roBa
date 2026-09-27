@@ -128,10 +128,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                        &kp T                                               &kp Y        &kp U  &my_lt 3 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                        &kp G        &mkp MB3                &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON               &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &my_lt 6 INT_HENKAN  &my_lt 2 SPACE  &my_lt 5 L      &kp BACKSPACE  &my_lt 1 ENTER                             &kp DEL
+&kp Q             &kp W         &kp E         &kp R                &kp T                                         &kp Y        &kp U  &my_lt 4 I    &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F                &kp G           &mkp MB3       &kp MINUS      &kp H        &kp J  &kp K         &kp L    &kp SQT
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                &kp B           &kp COLON      &kp SEMICOLON  &kp N        &kp M  &kp COMMA     &kp DOT  &kp SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &my_lt 6 INT_HENKAN  &my_lt 2 SPACE  &my_lt 5 L     &kp BACKSPACE  &my_lt 1 ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -150,7 +150,7 @@
 
         NUM {
             bindings = <
-&kp KP_SUBTRACT             &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS                                                   &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp KP_SUBTRACT             &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS                                                   &kp CARET         &kp AMPERSAND      &kp GRAVE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &kp KP_DIVIDE               &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MULTIPLY  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
 &mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT       &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
 &trans                      &trans           &trans           &trans           &trans           &trans                       &trans          &trans                                                                     &kp PIPE
@@ -190,10 +190,10 @@
 
         layer_6 {
             bindings = <
-&trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+&kp P                  &kp O     &kp I      &kp U   &kp Y                                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&kp SQT                &kp L     &kp K      &kp J   &kp H           &kp MINUS          &trans       &trans        &trans        &trans        &trans        &trans
+&mt RIGHT_SHIFT SLASH  &kp DOT   &kp COMMA  &kp M   &kp N           &kp SEMICOLON      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
+&kp RCTRL              &kp DEL    &kp RALT   &trans  &kp BACKSPACE  &kp ENTER          &trans       &trans                                                  &bt BT_CLR_ALL
             >;
         };
     };
