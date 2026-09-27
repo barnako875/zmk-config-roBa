@@ -195,6 +195,8 @@
 &mt RIGHT_SHIFT SLASH  &kp COMMA  &kp DOT   &kp M   &kp N          &kp SEMICOLON      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &kp RCTRL              &kp DEL    &kp RALT  &trans  &kp BACKSPACE  &kp ENTER          &trans       &trans                                                  &bt BT_CLR_ALL
             >;
+
+            sensor-bindings = <&inc_dec_kp LEFT_BRACKET RIGHT_BRACKET>;
         };
     };
 };
